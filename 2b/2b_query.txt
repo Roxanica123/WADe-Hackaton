@@ -1,0 +1,13 @@
+#2b) canteretele din all-female bands
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+select ?y as ?Member ?x as ?Band where {
+?x dct:subject dbc:All-female_bands . # all female bands
+?x dbo:bandMember ?y. # luam membrii trupei
+?y dbp:occupation ?occupation. # a caror ocupatie 
+FILTER (lang(?occupation)="en" && regex(?occupation, "singer")) # contine singer
+} 
+LIMIT 1000

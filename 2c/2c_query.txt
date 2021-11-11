@@ -1,0 +1,6 @@
+SELECT ?x ?nume 
+WHERE {
+?x rdf:type dbo:MusicalArtist; # de tipul musical artist 
+                  foaf:name ?nume. # numele artistului 
+FILTER (lang(?nume) = "en" && regex (?nume , "Anderson$")). # trebuie sa se sfarseasca cu Anderson
+} 

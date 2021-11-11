@@ -1,0 +1,19 @@
+#a) Guitarists and Kyboardists born in US or GB between 1940 and 1990
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+select distinct ?x ?birth ?country where {
+VALUES ?country {dbr:United_States dbr:United_Kingdom}
+VALUES ?instrument {dbr:Guitar dbr:MusicalKeyboard}
+
+?x rdf:type dbo:MusicalArtist . #de tipul MusicalArtist 
+?x dbo:instrument ?instrument . #care are ca instrument unul dintre instrumentele definite 
+?x dbo:birthDate ?birth . # data de nastere
+?x dbo:birthPlace [dbo:country ?country] . # tara in care se afla locul de nastere este in una dintre tarile definite
+
+FILTER (?birth < "1990-01-01T11:27:00.000Z"^^xsd:dateTime)  # iar data nastere e cuprinsa intre anii 1930 si 1990
+FILTER (?birth > "1940-01-01T11:27:00.000Z"^^xsd:dateTime) 
+}
+LIMIT 1000

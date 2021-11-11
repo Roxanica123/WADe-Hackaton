@@ -1,0 +1,11 @@
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+select ?x ?genre where {
+VALUES ?genre {dbr:Rock_music dbr:Heavy_metal_music dbr:K-pop dbr:Rhythm_and_blues}.  #lista de genuri preferate
+?x rdf:type dbo:Song. #cantece
+?x dbo:genre ?genre #a caror gen este unul dintre genurile preferate
+}
+LIMIT 1000

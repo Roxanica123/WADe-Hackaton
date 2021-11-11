@@ -1,0 +1,15 @@
+#a) Albums released in Iceland or Finland after 2000
+
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+select distinct ?x ?release ?country where {
+VALUES ?country {dbr:Iceland dbr:Finland} #countries 
+?x rdf:type dbo:Album . #de tip album
+?x dbp:released ?release . # ?release va fi o data  
+?x dbp:artist [dbo:hometown [dbo:country ?country]] # hometown ul artistului albumului este in una dintre tarile definite
+FILTER (?release > "2000-01-01T11:27:00.000Z"^^xsd:dateTime) # release date ul trebuie sa fie dupa 2000
+}
+LIMIT 1000
