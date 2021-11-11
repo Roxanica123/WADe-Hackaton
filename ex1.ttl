@@ -1,0 +1,197 @@
+@prefix mo: <http://purl.org/ontology/mo/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix  xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix tl: <http://purl.org/NET/c4dm/timeline.owl#> .
+@prefix event: <http://purl.org/NET/c4dm/event.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+@prefix rel: <http://www.perceive.net/schemas/relationship/> .           
+@prefix music: <http://purl.org/ontology/mo/>. # http://musicontology.com/specification/             
+@prefix dbr:	<http://dbpedia.org/resource/> .
+
+# Gen 1      
+<#rock> a music:Genre .      
+<#pop> a music:Genre .
+<#rap> a music:Genre .   
+
+<#Death-Metal> a <#rock>.
+<#Progressive-Metal> a <#rock>.
+<#Rock-&-Rol> a <#rock>.
+
+
+<#Country-Rap> a <#rap>.
+<#East-Coast> a <#rap>.
+<#West-Coast> a <#rap>.
+
+<#Lil-Nas-X> a music:MusicArtist .
+<#Old-Town-Road> a music:MusicalWork; dc:title:"Old-Town-Road";   foaf:maker<#Lil-Nas-X> .
+
+<#50-Cent> a music:MusicArtist .
+<#Candy-Shop> a music:MusicalWork; dc:title:"Candy Shop";   foaf:maker<#50-Cent> .
+
+<#Ice-Cube> a music:MusicArtist .
+<#It-Was-A-Good-Day> a music:MusicalWork; dc:title:"It Was A Good Day";   foaf:maker<#Ice-Cube> .
+
+# Gen 2
+<#Dance-Pop> a <#pop>.
+<#Latin-Ballad> a <#pop>.
+<#Pop/Rock> a <#pop>.
+
+<#Taylor-Swift> a music:MusicArtist .
+<#Blank-Space> a music:MusicalWork; dc:title:"Blank Space";   foaf:maker<#Taylor-Swift> .
+
+<#Luis-Fonsi> a music:MusicArtist .
+<#Daddy-Yankee> a music:MusicArtist .
+
+<#Despacito-creatores>    a mo:MusicGroup;    foaf:member <#Luis-Fonsi>; foaf:member<#Daddy-Yankee>.
+<#Despacito> a music:MusicalWork; dc:title:"Despacito";   foaf:maker<#Despacito-creatores>  .
+
+# Gen 3
+<#Afro-Punk> a <#rock>.
+<#Death-Metal-> a <#rock>.
+<#Rock-&-Roll> a <#rock>.
+
+
+<#Ravyn-Lenae>  a music:MusicArtist .
+<#Lenae> a music:MusicalWork; dc:title:"Lenae";   foaf:maker<#Ravyn-Lenae>  .
+
+<#DEATH-DECLINE>  a mo:MusicGroup;    
+foaf:member <#Fabien-Legué>; 
+foaf:member <#Alexandre-Morel>; 
+foaf:member <#Jordan-Henriques>; 
+foaf:member <#Arnaud-Fournet>.
+<#Fabien-Legué>  a music:MusicArtist .
+<#Alexandre-Morel>  a music:MusicArtist .
+<#Jordan-Henriques>  a music:MusicArtist .
+<#Arnaud-Fournet>  a music:MusicArtist .
+<#Useless-Sacrifice> a music:MusicalWork; dc:title:"Useless Sacrifice";   foaf:maker<#DEATH-DECLINE>  .
+
+
+<#Jimi-Hendrix> a music:MusicArtist .
+<#Purple-Haze> a music:MusicalWork; dc:title:"Purple Haze";   foaf:maker<#Jimi-Hendrix>  .
+
+
+
+<#Alternative-Rap> a <#rap>.
+<#Avant-Garde> a <#rap>.
+<#Bounce> a <#rap>.
+<#Chap-Hop> a <#rap>.
+<#Christian-Hip-Hop> a <#rap>.
+<#Conscious-Hip-Hop> a <#rap>.
+<#Country-Rap> a <#rap>.
+<#Crunkcore> a <#rap>.
+<#Cumbia-Rap> a <#rap>.
+<#Dirty-South> a <#rap>.
+<#East-Coast> a <#rap>.
+<#Freestyle-Rap> a <#rap>.
+<#G-Funk> a <#rap>.
+<#Gangsta-Rap> a <#rap>.
+<#Golden-Age> a <#rap>.
+<#Hardcore-Rap> a <#rap>.
+<#Hip-Hop> a <#rap>.
+<#Hip-Pop> a <#rap>.
+<#Hyphy> a <#rap>.
+<#Industrial-Hip-Hop> a <#rap>.
+<#Instrumental-Hip-Hop> a <#rap>.
+<#Jazz-Rap> a <#rap>.
+<#Latin-Rap> a <#rap>.
+<#Low-Bap> a <#rap>.
+<#Lyrical-Hip-Hop> a <#rap>.
+<#Merenrap> a <#rap>.
+<#Midwest-Hip-Hop> a <#rap>.
+<#Motswako> a <#rap>.
+<#Nerdcore> a <#rap>.
+<#New-Jack-Swing> a <#rap>.
+<#New-School-Hip-Hop> a <#rap>.
+<#Old-School-Rap> a <#rap>.
+<#Rap> a <#rap>.
+<#Turntablism> a <#rap>.
+<#Underground-Rap> a <#rap>.
+<#West-Coast-Ra> a <#rap>.
+
+
+<#Adult-Contemporary> a <#pop>.
+<#Arab-Pop> a <#pop>.
+<#Baroque> a <#pop>.
+<#Britpop> a <#pop>.
+<#Bubblegum-Pop-> a <#pop>.
+<#Chamber-Pop-> a <#pop>.
+<#Chanson> a <#pop>.
+<#Christian-Pop> a <#pop>.
+<#Classical-Crossover> a <#pop>.
+<#Europop> a <#pop>.
+<#Dance-Pop> a <#pop>.
+<#Dream-Pop-> a <#pop>.
+<#Electro-Pop-> a <#pop>.
+<#Iranian-Pop> a <#pop>.
+<#Jangle-Pop> a <#pop>.
+<#Latin-Ballad> a <#pop>.
+<#Levenslied> a <#pop>.
+<#Louisiana-Swamp-Pop> a <#pop>.
+<#Mexican-Pop> a <#pop>.
+<#Motorpop> a <#pop>.
+<#New-Romanticism> a <#pop>.
+<#Orchestral-Pop> a <#pop>.
+<#Pop-Rap> a <#pop>.
+<#Popera> a <#pop>.
+<#Pop/Rock> a <#pop>.
+<#Pop-Punk-> a <#pop>.
+<#Power-Pop> a <#pop>.
+<#Psychedelic-Pop> a <#pop>.
+<#Schlager> a <#pop>.
+<#Soft-Rock> a <#pop>.
+<#Sophisti-Pop> a <#pop>.
+<#Space-Age-Pop> a <#pop>.
+<#Sunshine-Pop> a <#pop>.
+<#Surf-Pop> a <#pop>.
+<#Synthpop> a <#pop>.
+<#Teen-Pop> a <#pop>.
+<#Traditional-Pop-Music> a <#pop>.
+<#Turkish-Pop> a <#pop>.
+<#Vispop> a <#pop>.
+<#Wonky-Pop> a <#pop>.
+<#Post-Disco> a <#pop>.
+<#Progressive-Po> a <#pop>.
+
+<#Acid-Rock-> a <#rock>.
+<#Adult-Oriented-Rock-> a <#rock>.
+<#Afro-Punk> a <#rock>.
+<#Adult-Alternative> a <#rock>.
+<#Alternative-Rock-> a <#rock>.
+<#American-Traditional-Rock> a <#rock>.
+<#Anatolian-Rock> a <#rock>.
+<#Arena-Rock> a <#rock>.
+<#Art-Rock> a <#rock>.
+<#Blues-Rock> a <#rock>.
+<#British-Invasion> a <#rock>.
+<#Cock-Rock> a <#rock>.
+<#Death-Metal-> a <#rock>.
+<#Doom-Metal-> a <#rock>.
+<#Glam-Rock> a <#rock>.
+<#Gothic-Metal-> a <#rock>.
+<#Grind-Core> a <#rock>.
+<#Hair-Metal-> a <#rock>.
+<#Hard-Rock> a <#rock>.
+<#Math-Metal> a <#rock>.
+<#Math-Rock-> a <#rock>.
+<#Metal-> a <#rock>.
+<#Metal-Core> a <#rock>.
+<#Noise-Rock-> a <#rock>.
+<#Jam-Bands> a <#rock>.
+<#Post-Punk-> a <#rock>.
+<#Prog-Rock/Art-Rock> a <#rock>.
+<#Progressive-Metal-> a <#rock>.
+<#Rock-&-Roll> a <#rock>.
+<#Rockabilly-> a <#rock>.
+<#Roots-Rock> a <#rock>.
+<#Singer/Songwriter> a <#rock>.
+<#Southern-Rock> a <#rock>.
+<#Spazzcore> a <#rock>.
+<#Stoner-Metal> a <#rock>.
+<#Surf> a <#rock>.
+<#Technical-Death-Metal-> a <#rock>.
+<#Tex-Mex> a <#rock>.
+<#Thrash-Metal> a <#rock>.
+<#Time-Lord-Rock-> a <#rock>.
+<#Trip-hop> a <#rock>.
