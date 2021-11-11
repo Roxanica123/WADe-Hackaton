@@ -15,23 +15,18 @@
 <#pop> a music:Genre .
 <#rap> a music:Genre .   
 
-<#Death-Metal> a <#rock>.
-<#Progressive-Metal> a <#rock>.
-<#Rock-&-Rol> a <#rock>.
-
-
 <#Country-Rap> a <#rap>.
 <#East-Coast> a <#rap>.
 <#West-Coast> a <#rap>.
 
 <#Lil-Nas-X> a music:MusicArtist .
-<#Old-Town-Road> a music:MusicalWork; dc:title:"Old-Town-Road";   foaf:maker<#Lil-Nas-X> .
+<#Old-Town-Road> a music:MusicalWork; dc:title:"Old-Town-Road";   foaf:maker<#Lil-Nas-X>; dbr:genre<#Country-Rap>.
 
 <#50-Cent> a music:MusicArtist .
-<#Candy-Shop> a music:MusicalWork; dc:title:"Candy Shop";   foaf:maker<#50-Cent> .
+<#Candy-Shop> a music:MusicalWork; dc:title:"Candy Shop";   foaf:maker<#50-Cent>; dbr:genre<#East-Coast>  .
 
 <#Ice-Cube> a music:MusicArtist .
-<#It-Was-A-Good-Day> a music:MusicalWork; dc:title:"It Was A Good Day";   foaf:maker<#Ice-Cube> .
+<#It-Was-A-Good-Day> a music:MusicalWork; dc:title:"It Was A Good Day";   foaf:maker<#Ice-Cube>; dbr:genre<#West-Coast> .
 
 # Gen 2
 <#Dance-Pop> a <#pop>.
@@ -39,13 +34,13 @@
 <#Pop/Rock> a <#pop>.
 
 <#Taylor-Swift> a music:MusicArtist .
-<#Blank-Space> a music:MusicalWork; dc:title:"Blank Space";   foaf:maker<#Taylor-Swift> .
+<#Blank-Space> a music:MusicalWork; dc:title:"Blank Space";   foaf:maker<#Taylor-Swift>; dbr:genre<#Dance-Pop> .
 
 <#Luis-Fonsi> a music:MusicArtist .
 <#Daddy-Yankee> a music:MusicArtist .
 
 <#Despacito-creatores>    a mo:MusicGroup;    foaf:member <#Luis-Fonsi>; foaf:member<#Daddy-Yankee>.
-<#Despacito> a music:MusicalWork; dc:title:"Despacito";   foaf:maker<#Despacito-creatores>  .
+<#Despacito> a music:MusicalWork; dc:title:"Despacito";   foaf:maker<#Despacito-creatores>  ; dbr:genre<#Latin-Ballad>.
 
 # Gen 3
 <#Afro-Punk> a <#rock>.
@@ -54,7 +49,7 @@
 
 
 <#Ravyn-Lenae>  a music:MusicArtist .
-<#Lenae> a music:MusicalWork; dc:title:"Lenae";   foaf:maker<#Ravyn-Lenae>  .
+<#Lenae> a music:MusicalWork; dc:title:"Lenae";   foaf:maker<#Ravyn-Lenae>; dbr:genre<#Afro-Punk> .
 
 <#DEATH-DECLINE>  a mo:MusicGroup;    
 foaf:member <#Fabien-Legué>; 
@@ -65,11 +60,11 @@ foaf:member <#Arnaud-Fournet>.
 <#Alexandre-Morel>  a music:MusicArtist .
 <#Jordan-Henriques>  a music:MusicArtist .
 <#Arnaud-Fournet>  a music:MusicArtist .
-<#Useless-Sacrifice> a music:MusicalWork; dc:title:"Useless Sacrifice";   foaf:maker<#DEATH-DECLINE>  .
+<#Useless-Sacrifice> a music:MusicalWork; dc:title:"Useless Sacrifice";   foaf:maker<#DEATH-DECLINE> ; dbr:genre<#Death-Metal-> .
 
 
 <#Jimi-Hendrix> a music:MusicArtist .
-<#Purple-Haze> a music:MusicalWork; dc:title:"Purple Haze";   foaf:maker<#Jimi-Hendrix>  .
+<#Purple-Haze> a music:MusicalWork; dc:title:"Purple Haze";   foaf:maker<#Jimi-Hendrix> ; dbr:genre<#Rock-&-Roll> .
 
 
 
